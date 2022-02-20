@@ -18,7 +18,7 @@
     "require": {
         "nao-pon/flysystem-google-drive": "~1.1",
         "friendsofphp/php-cs-fixer": "dev-master",
-        "illuminate/filesystem": "10.x-dev"
+        "illuminate/filesystem": "*"
     },
     "extra": {
         "laravel": {
