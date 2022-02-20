@@ -1,0 +1,30 @@
+{
+    "name": "everzel/google-drive",
+    "description": "Package for Google Drive",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Everzel\\GoogleDrive\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zelvad",
+            "email": "vladislav.zelenyk@scalemeup.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nao-pon/flysystem-google-drive": "~1.1",
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "illuminate/filesystem": "10.x-dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Everzel\\GoogleDrive\\GoogleDriveServiceProvider"
+            ]
+        }
+    }
+}
