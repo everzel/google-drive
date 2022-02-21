@@ -42,7 +42,7 @@ or
 
 #### Put file
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->putFile(string $patch, mixed $file')
+app(\Everzel\GoogleDrive\GoogleDrive::class)->putFile(string $patch, mixed $file)
 ```
 
 #### Get file from url
