@@ -25,5 +25,9 @@
                 "Everzel\\GoogleDrive\\GoogleDriveServiceProvider"
             ]
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true
 }
