@@ -30,7 +30,7 @@ GOOGLE_DRIVE_FOLDER_ID=
 
 ### Usage
 
-### Storage
+#### Storage
 
 ```
 app(\Everzel\GoogleDrive\GoogleDrive::class)->storage() : lluminate\Contracts\Filesystem\Filesystem
