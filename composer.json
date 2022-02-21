@@ -16,8 +16,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "nao-pon/flysystem-google-drive": "1.1.13",
-        "illuminate/filesystem": "*"
+        "illuminate/filesystem": "*",
+        "nao-pon/flysystem-google-drive": "^1.1"
     },
     "extra": {
         "laravel": {

@@ -16,6 +16,11 @@ class GoogleDrive
         $this->storage = Storage::disk('google');
     }
 
+    public function storage(): Filesystem
+    {
+        return $this->storage;
+    }
+
     public function putFile(string $patch, mixed $file): bool
     {
         return $this->storage->put($patch, $file);
