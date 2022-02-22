@@ -88,7 +88,7 @@ app(\Everzel\GoogleDrive\GoogleDrive::class)->getFileFromPath(string $patch, str
 app(\Everzel\GoogleDrive\GoogleDrive::class)->getOriginalFileName(string $originalPath, string $fileName): string
 ```
 ##### Example:
-```getFgetOriginalFileNameilePatch('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom', 'test.txt')```
+```getOriginalFileName('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom', 'test.txt')```
 
 
 #### Delete file from url
