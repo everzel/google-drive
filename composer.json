@@ -1,5 +1,5 @@
 {
-    "name": "everzel/google-drive",
+    "name": "everzel/google-drive-laravel",
     "description": "Package for Google Drive",
     "type": "library",
     "license": "MIT",
