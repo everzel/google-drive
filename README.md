@@ -60,7 +60,7 @@ app(\Everzel\GoogleDrive\GoogleDrive::class)->checkExistsAndCreateFolders(string
 app(\Everzel\GoogleDrive\GoogleDrive::class)->getFolders(string $originalFolderName = '/') : Collection
 ```
 ##### Example:
-```getFolders('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom')```
+```getFolders('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom') && getFolders('/') - get all folders```
 
 #### Get all files from folder
 ```
