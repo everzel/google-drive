@@ -67,7 +67,7 @@ app(\Everzel\GoogleDrive\GoogleDrive::class)->getFolders(string $originalFolderN
 app(\Everzel\GoogleDrive\GoogleDrive::class)->getAllFromFolder(string $originalFolderName = '/') : Collection
 ```
 ##### Example:
-```getAllFromFolder('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom')```
+```getAllFromFolder('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom') && && getAllFromFolder('/') - get all files```
 
 #### Get file from URL
 ```
