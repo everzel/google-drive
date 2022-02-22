@@ -111,3 +111,12 @@ app(\Everzel\GoogleDrive\GoogleDrive::class)->getFilePathFromUrl(string $url): s
 ```
 ##### Example:
 ```getFilePathFromUrl('https://drive.google.com/file/d/xxxxxxx/view?usp=sharing')```
+
+
+## Exceptions:
+
+| Type | Exception |
+| --- | --- |
+| File not found | FileNotFoundException |
+| Path not found | PatchNotFoundException |
+| Url invalid format | UrlInvalidFormatException |
