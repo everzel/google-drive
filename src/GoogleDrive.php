@@ -58,7 +58,7 @@ class GoogleDrive
                 if (is_null($prevCloudFolder)) {
                     $this->makeDirectory('/' . $currentFolder);
                 } else {
-                    $this->makeDirectory( $prevCloudFolder['cloud_patch'] . '/' . $currentFolder);
+                    $this->makeDirectory($prevCloudFolder['cloud_patch'] . '/' . $currentFolder);
                 }
 
                 $isReturned = true;
@@ -192,7 +192,7 @@ class GoogleDrive
             $item = $currentFolder->where('name', $localPatch[$i])->first();
 
             if (empty($item)) {
-                throw new PatchNotFoundException;
+                throw new PatchNotFoundException();
             }
 
             if ($i === count($localPatch) - 1) {
@@ -212,7 +212,7 @@ class GoogleDrive
         $findItem = $items->where('name', $fileName);
 
         if ($findItem->isEmpty()) {
-            throw new FileNotFoundException;
+            throw new FileNotFoundException();
         }
 
         return $findItem->first()['path'];
@@ -249,7 +249,7 @@ class GoogleDrive
 
         foreach ($removed as $remove) {
             if (! str_contains($url, $remove)) {
-                throw new UrlInvalidFormatException;
+                throw new UrlInvalidFormatException();
             }
 
             $url = str_replace($remove, '', $url);
