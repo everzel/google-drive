@@ -105,7 +105,7 @@ app(\Everzel\GoogleDrive\GoogleDrive::class)->deleteFileFromPatch(string $patch,
 ##### Example:
 ```deleteFileFromPatch('github/testfile', 'test.txt')```
 
-#### Delete file from patch
+#### Get file patch from url
 ```
 app(\Everzel\GoogleDrive\GoogleDrive::class)->getFilePathFromUrl(string $url): string
 ```
