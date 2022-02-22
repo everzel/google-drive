@@ -42,25 +42,72 @@ or
 
 #### Put file
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->putFile(string $patch, mixed $file)
+app(\Everzel\GoogleDrive\GoogleDrive::class)->putFile(mixed $file, string $filename, string $patch) : bool
 ```
 
-#### Get file from url
+##### Example:
+```putFile('test text', 'test.txt', 'github/testfile')```
+
+#### Create folders
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->getFileFromUrl(string $url)
+app(\Everzel\GoogleDrive\GoogleDrive::class)->checkExistsAndCreateFolders(string $patch) : string
 ```
+##### Example:
+```checkExistsAndCreateFolders('github/testfile')```
+
+#### Get folders
+```
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getFolders(string $originalFolderName = '/') : Collection
+```
+##### Example:
+```getFolders('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom')```
+
+#### Get all files from folder
+```
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getAllFromFolder(string $originalFolderName = '/') : Collection
+```
+##### Example:
+```getAllFromFolder('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom')```
+
+#### Get file from URL
+```
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getFileFromUrl(string $url): mixed
+```
+##### Example:
+```getFileFromUrl('https://drive.google.com/file/d/xxxxxxx/view?usp=sharing')```
 
 #### Get file from patch
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->getFileFromPath(string $patch)
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getFileFromPath(string $patch, string $fileName): mixed
 ```
+##### Example:
+```getFileFromPath('github/testfile', 'test.txt')```
+
+#### Get original file name
+```
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getOriginalFileName(string $originalPath, string $fileName): string
+```
+##### Example:
+```getFgetOriginalFileNameilePatch('1bFb80xMJUT7yGktC4PV2w1HznWaNwjom', 'test.txt')```
+
 
 #### Delete file from url
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->deleteFileFromUrl(string $url)
+app(\Everzel\GoogleDrive\GoogleDrive::class)->deleteFileFromUrl(string $url): bool
 ```
+##### Example:
+```deleteFileFromUrl('https://drive.google.com/file/d/xxxxxxx/view?usp=sharing')```
 
 #### Delete file from patch
 ```
-app(\Everzel\GoogleDrive\GoogleDrive::class)->deleteFileFromPatch(string $patch)
+app(\Everzel\GoogleDrive\GoogleDrive::class)->deleteFileFromPatch(string $patch, string string $fileName): bool
 ```
+##### Example:
+```deleteFileFromPatch('github/testfile', 'test.txt')```
+
+#### Delete file from patch
+```
+app(\Everzel\GoogleDrive\GoogleDrive::class)->getFilePathFromUrl(string $url): string
+```
+##### Example:
+```getFilePathFromUrl('https://drive.google.com/file/d/xxxxxxx/view?usp=sharing')```
