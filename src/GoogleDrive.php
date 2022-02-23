@@ -235,6 +235,15 @@ class GoogleDrive
         return $this->storage->delete($filePatch);
     }
 
+    public function getFileInfo(string $originalFileName): array
+    {
+        return [
+            'mime_type' => $this->storage()->mimeType($originalFileName),
+            'size' => $this->storage()->size($originalFileName),
+            'lastmod' => $this->storage()->lastModified($originalFileName),
+        ];
+    }
+
     /**
      * @throws Exception
      */
